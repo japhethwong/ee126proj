@@ -290,6 +290,7 @@ class ScholarArticleParser(object):
         self.article = None
         self.site = site or ScholarConf.SCHOLAR_SITE
         self.year_re = re.compile(r'\b(?:20|19)\d{2}\b')
+        self.author_re = re.compile(r'^[a-zA-Z, .]*')
 
     def handle_article(self, art):
         """
@@ -505,10 +506,12 @@ class ScholarArticleParser120726(ScholarArticleParser):
                 if tag.find('div', {'class': 'gs_a'}):
                     year = self.year_re.findall(tag.find('div', {'class': 'gs_a'}).text)
                     self.article['year'] = year[0] if len(year) > 0 else None
+                    author = self.author_re.findall(tag.find('div', {'class': 'gs_a'}).text)
+                    if len(author) > 0:
+                        self.article['author'] = [x.strip().lower() for x in author[0].split(',')]
 
                 if tag.find('div', {'class': 'gs_fl'}):
                     self._parse_links(tag.find('div', {'class': 'gs_fl'}))
-
 
 class ScholarQuery(object):
     """
@@ -766,6 +769,7 @@ class ScholarQuerier(object):
         html = self._get_http_response(url=self.GET_SETTINGS_URL,
                                        log_msg='dump of settings form HTML',
                                        err_msg='requesting settings failed')
+
         if html is None:
             return False
 
@@ -813,6 +817,7 @@ class ScholarQuerier(object):
         html = self._get_http_response(url=query.get_url(),
                                        log_msg='dump of query response HTML',
                                        err_msg='results retrieval failed')
+
         if html is None:
             return
 
