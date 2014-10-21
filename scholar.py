@@ -917,7 +917,7 @@ def citation_export(querier):
         print(art.as_citation() + '\n')
 
 
-def main():
+def main(args = sys.argv):
     usage = """scholar.py [options] <query string>
 A command-line interface to Google Scholar.
 
@@ -982,7 +982,7 @@ scholar.py -c 5 -a "albert einstein" -t --none "quantum theory" --after 1970"""
                      help='Show version information')
     parser.add_option_group(group)
 
-    options, _ = parser.parse_args()
+    options, _ = parser.parse_args(args)
 
     # Show help if we have neither keyword search nor author name
     if len(sys.argv) == 1:
