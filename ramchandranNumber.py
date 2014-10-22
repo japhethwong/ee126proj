@@ -88,7 +88,7 @@ def run():
 	_populate_randomly_(random_author)
 
 	for author in ramchandran_numbers:
-		print author, ramchandran_numbers[author]
+		print unicode(author[1]).title() + ": " + str(ramchandran_numbers[author])
 
 if __name__ == "__main__":
 	run()
