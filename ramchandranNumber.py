@@ -5,8 +5,8 @@ from scrape import getCoAuthorsForAuthor
 KANNAN_RAMCHANDRAN = "Kannan Ramchandran"
 ramchandran_numbers = {KANNAN_RAMCHANDRAN : 0}
 
-INTIAL_ALPHA = 5
-MAX_INITIAL_DEPTH = 4
+INTIAL_ALPHA = 4
+MAX_INITIAL_DEPTH = 2
 
 ALPHA = 5
 MAX_TRIES = 10
@@ -46,12 +46,10 @@ def _bfs_(Q):
 	if random_int == 0:
 		random_author = author
 
-	if author in ramchandran_numbers:
-		return 
-	else:
+	if not author in ramchandran_numbers:
 		ramchandran_numbers[author] = depth
 
-	coauthors = get_coauthors(author, INITIAL_ALPHA)
+	coauthors = get_coauthors(author, INTIAL_ALPHA)
 	for coauthor in coauthors:
 		Q.append((coauthor, depth + 1))
 
@@ -66,8 +64,8 @@ def _populate_initial_database_():
 # Populates the database given a random author trying 
 # MAX_TRIES tries
 def _populate_randomly_(author):
-	initial_number = ramchandran_numbers[author]
-	max_number = ramchandran_numbers[author] + MAX_TRIES
+	initial_number = ramchandran_numbers[author] + 1
+	max_number = ramchandran_numbers[author] + MAX_TRIES 
 
 	for rmchndrn_number in range(initial_number, max_number):
 		coauthors = get_coauthors(author, ALPHA)
