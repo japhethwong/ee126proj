@@ -7,11 +7,6 @@ RAMCHANDRAN_NAME = 'kannan ramchandran'
 RAMCHANDRAN_ID = 'DcV-5RAAAAAJ'
 CSV_FILENAME = 'author_id_mapping.csv'
 
-authors_dict = {}
-authors_dict[RAMCHANDRAN_NAME] = RAMCHANDRAN_ID
-with open(CSV_FILENAME, 'w') as f:
-    f.write(getCSVEntryForAuthorAndId(RAMCHANDRAN_NAME, RAMCHANDRAN_ID))
-
 def getCoAuthorsForAuthor(author, n=10):
     author_id = getIdForAuthor(author)
     if (not author_id):
@@ -69,3 +64,8 @@ def extractAuthorInfo(node):
     user_id = re.sub(r'^/citations\?user=([^&]+).*$', r'\1', url)
     author_name = a_node.string
     return user_id, author_name
+
+authors_dict = {}
+authors_dict[RAMCHANDRAN_NAME] = RAMCHANDRAN_ID
+with open(CSV_FILENAME, 'w') as f:
+    f.write(getCSVEntryForAuthorAndId(RAMCHANDRAN_NAME, RAMCHANDRAN_ID))
