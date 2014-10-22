@@ -5,7 +5,7 @@ import re
 TARGET_CLASS = 'gsc_1usr_name'
 
 authors_dict = {}
-authors_dict['kannan ramchandran'] = ''
+authors_dict['kannan ramchandran'] = 'DcV-5RAAAAAJ'
 
 def getIdForAuthor(author):
     if (author in authors_dict):
