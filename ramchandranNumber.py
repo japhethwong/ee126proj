@@ -1,10 +1,9 @@
 import random
 from collections import deque
-from scrape import getCoAuthorsForAuthor
+from scrape import getCoAuthorsForAuthor, RAMCHANDRAN_NAME, RAMCHANDRAN_ID
 
-KANNAN_RAMCHANDRAN = "Kannan Ramchandran"
 PADDING = " " * 4
-ramchandran_numbers = {KANNAN_RAMCHANDRAN : 0}
+ramchandran_numbers = {(RAMCHANDRAN_ID, RAMCHANDRAN_NAME) : 0}
 
 INTIAL_ALPHA = 4
 MAX_INITIAL_DEPTH = 2
@@ -12,7 +11,7 @@ MAX_INITIAL_DEPTH = 2
 ALPHA = 5
 MAX_TRIES = 10
 
-random_author = KANNAN_RAMCHANDRAN
+random_author = RAMCHANDRAN_NAME
 
 def get_random_article(author):
 	pass
@@ -59,7 +58,7 @@ def _bfs_(Q):
 # Populates the initial databae of Ramchandran numbers
 def _populate_initial_database_():
 	Q = deque()
-	Q.append((KANNAN_RAMCHANDRAN, 0))
+	Q.append(((RAMCHANDRAN_ID, RAMCHANDRAN_NAME), 0))
 	_bfs_(Q)
 
 # Populates the database given a random author trying 
@@ -87,6 +86,7 @@ def run():
 	_populate_randomly_(random_author)
 
 	entries = ramchandran_numbers.items()
+	print(">>> " + str(entries))
 	entries.sort(key=lambda(elem): elem[1])
 	longest_author = len(max(entries, key=lambda(elem): len(elem[0][1]))[0][1])
 
