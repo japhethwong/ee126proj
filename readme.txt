@@ -20,7 +20,13 @@ System Requirements
 Instructions
 ------------
 Run our function by executing the following commands:
-$ python ramchandranNumber.py
+$ python ramchandranNumber.py [INITIAL_ALPHA] [MAX_INITIAL_DEPTH] [ALPHA] [MAX_TRIES]
+
+Arguments:  (All optional, set to default values if not provided)
+-- INITIAL_ALPHA: Branching factor for initial BFS (create starting point)
+-- MAX_INITIAL_DEPTH: Maximum BFS depth for the starting point.
+-- ALPHA: The number of random coauthors to sample from
+-- MAX_TRIES: The maximum number of iterations to run when sampling randomly.
 
 This will execute our code by starting at Professor Kannan Ramchandran, 
 randomly picking a coauthor to visit, and continuing to visit professors' 

@@ -1,6 +1,7 @@
 import random
 from collections import deque
 from scrape import getCoAuthorsForAuthor, RAMCHANDRAN_NAME, RAMCHANDRAN_ID
+import sys
 
 PADDING = " " * 4
 ramchandran_numbers = {(RAMCHANDRAN_ID, RAMCHANDRAN_NAME) : 0}
@@ -90,7 +91,6 @@ def run():
 	entries.sort(key=lambda(elem): elem[1])
 	longest_author = len(max(entries, key=lambda(elem): len(elem[0][1]))[0][1])
 
-	print("== Computing Ramchandran numbers ==")
 	print("\nAUTHOR" + PADDING + " " * max(0, longest_author - 6) + "RAMCHANDRAN NUMBER")
 	print("")
 	for entry in entries:
@@ -101,4 +101,19 @@ def run():
 	print("")
 
 if __name__ == "__main__":
+	print("== Computing Ramchandran numbers ==")
+	try:
+		if (len(sys.argv) >= 2):
+			INITIAL_ALPHA = int(sys.argv[1])
+		if (len(sys.argv) >= 3):
+			MAX_INITIAL_DEPTH = int(sys.argv[2])
+		if (len(sys.argv) >= 4):
+			ALPHA = int(sys.argv[3])
+		if (len(sys.argv) >= 5):
+			MAX_TRIES = int(sys.argv[4])
+
+	except ValueError as err:
+		print err
+
+	print("Using Parameters:\n\tINITIAL_ALPHA: %d\n\tMAX_INITIAL_DEPTH: %d\n\tALPHA: %d\n\tMAX_TRIES: %d" % (INITIAL_ALPHA, MAX_INITIAL_DEPTH, ALPHA, MAX_TRIES))
 	run()
