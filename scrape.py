@@ -3,9 +3,17 @@ import urllib2
 import re
 
 TARGET_CLASS = 'gsc_1usr_name'
+RAMCHANDRAN_NAME = 'kannan ramchandran'
+RAMCHANDRAN_ID = 'DcV-5RAAAAAJ'
+CSV_FILENAME = 'author_id_mapping.csv'
 
 authors_dict = {}
-authors_dict['kannan ramchandran'] = 'DcV-5RAAAAAJ'
+authors_dict[RAMCHANDRAN_NAME] = RAMCHANDRAN_ID
+with open(CSV_FILENAME, 'w') as f:
+    f.write(getCSVEntryForAuthorAndId(RAMCHANDRAN_NAME, RAMCHANDRAN_ID))
+
+def getCSVEntryForAuthorAndId(author, author_id):
+    return str(author)+','+str(author_id)
 
 def getIdForAuthor(author):
     if (author in authors_dict):
@@ -36,6 +44,8 @@ def searchPageForCoAuthors(url)
             author_id, author = checked
             if (author_id not in authors_dict):
                 authors_dict[author] = author_id
+                with open(CSV_FILENAME, 'a') as f:
+                    f.write(getCSVEntryForAuthorAndId(author, author_id))
             authors.append(checked)
     return authors
 
