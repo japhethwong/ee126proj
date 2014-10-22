@@ -22,13 +22,13 @@ def getCoAuthorsForAuthor(author, n=10):
 def getCoAuthorPageUrl(id):
     return 'http://scholar.google.com/citations?view_op=list_colleagues&hl=en&user='+str(id)
 
-def searchPageForCoAuthors(url)
+def searchPageForCoAuthors(url):
     response = urllib2.urlopen(url)
     html = response.read()
     soup = BeautifulSoup(html)
     elements_on_page = soup.find_all('h3')
     authors = []
-    for (element in elements_on_page):
+    for element in elements_on_page:
         checked = extractAuthorInfo(element)
         if (not checked):
             continue
