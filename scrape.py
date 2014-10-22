@@ -62,7 +62,7 @@ def extractAuthorInfo(node):
 
     url = a_node['href']
     user_id = re.sub(r'^/citations\?user=([^&]+).*$', r'\1', url)
-    author_name = a_node.string
+    author_name = a_node.string.lower()
     return user_id, author_name
 
 authors_dict = {}
