@@ -36,24 +36,25 @@ def get_random_coauthor(coauthors):
 # Ramchandran numbers 
 def _bfs_(Q):
 	global random_author
-	author, depth = Q.popleft()
 
-	if depth > MAX_INITIAL_DEPTH:
-		return 
+	while len(Q) != 0:
+		author, depth = Q.popleft()
 
-	# Use reservoir sampling
-	random_int = random.randint(0, len(ramchandran_numbers) - 1)
-	if random_int == 0:
-		random_author = author
+		if depth > MAX_INITIAL_DEPTH:
+			continue 
 
-	if not author in ramchandran_numbers:
-		ramchandran_numbers[author] = depth
+		# Use reservoir sampling
+		random_int = random.randint(0, len(ramchandran_numbers) - 1)
+		if random_int == 0:
+			random_author = author
 
-	coauthors = get_coauthors(author, INTIAL_ALPHA)
-	for coauthor in coauthors:
-		Q.append((coauthor, depth + 1))
+		if not author in ramchandran_numbers:
+			ramchandran_numbers[author] = depth
 
-	_bfs_(Q)
+		coauthors = get_coauthors(author, INTIAL_ALPHA)
+		for coauthor in coauthors:
+			Q.append((coauthor, depth + 1))
+
 
 # Populates the initial databae of Ramchandran numbers
 def _populate_initial_database_():
