@@ -1,14 +1,15 @@
 import random
 from collections import deque
+from scrape import getCoAuthorsForAuthor
 
 KANNAN_RAMCHANDRAN = "Kannan Ramchandran"
 ramchandran_numbers = {KANNAN_RAMCHANDRAN : 0}
 
 INTIAL_ALPHA = 5
-MAX_INITIAL_DEPTH = 6
+MAX_INITIAL_DEPTH = 4
 
-ALPHA = 10
-MAX_TRIES = 50
+ALPHA = 5
+MAX_TRIES = 10
 
 random_author = KANNAN_RAMCHANDRAN
 
@@ -19,13 +20,13 @@ def get_random_author(article):
 	pass
 
 def get_coauthors(name, n):
-	pass
+	return getCoAuthorsForAuthor(name, n)
 
 def is_stanfurd_professor(name):
 	pass
 
 # Return a random co-author
-def get_random_coauthor(authors):
+def get_random_coauthor(coauthors):
 	if len(coauthors) == 0:
 		return None
 	else:
@@ -45,7 +46,7 @@ def _bfs_(Q):
 	if random_int == 0:
 		random_author = author
 
-	if name in ramchandran_numbers:
+	if author in ramchandran_numbers:
 		return 
 	else:
 		ramchandran_numbers[author] = depth
@@ -59,7 +60,7 @@ def _bfs_(Q):
 # Populates the initial databae of Ramchandran numbers
 def _populate_initial_database_():
 	Q = deque()
-	deque.append((KANNAN_RAMCHANDRAN, 0))
+	Q.append((KANNAN_RAMCHANDRAN, 0))
 	_bfs_(Q)
 
 # Populates the database given a random author trying 
@@ -85,3 +86,9 @@ def _populate_randomly_(author):
 def run():
 	_populate_initial_database_()
 	_populate_randomly_(random_author)
+
+	for author in ramchandran_numbers:
+		print author, ramchandran_numbers[author]
+
+if __name__ == "__main__":
+	run()

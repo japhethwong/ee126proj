@@ -290,7 +290,7 @@ class ScholarArticleParser(object):
         self.article = None
         self.site = site or ScholarConf.SCHOLAR_SITE
         self.year_re = re.compile(r'\b(?:20|19)\d{2}\b')
-        self.author_re = re.compile(r'^[a-zA-Z, .]*')
+        self.author_re = re.compile(r'^[a-zA-Z, .']+')
 
     def handle_article(self, art):
         """
