@@ -12,6 +12,14 @@ authors_dict[RAMCHANDRAN_NAME] = RAMCHANDRAN_ID
 with open(CSV_FILENAME, 'w') as f:
     f.write(getCSVEntryForAuthorAndId(RAMCHANDRAN_NAME, RAMCHANDRAN_ID))
 
+def getCoAuthorsForAuthor(author, n=10):
+    author_id = getIdForAuthor(author)
+    if (not author_id):
+        author_id = RAMCHANDRAN_ID
+    coauthor_page = getCoAuthorPageUrl(author_id)
+    coauthors = searchPageForCoAuthors(coauthor_page)
+    return coauthors if (len(coauthors) < n) else coauthors[:n]
+
 def getCSVEntryForAuthorAndId(author, author_id):
     return str(author)+','+str(author_id)
 
@@ -19,13 +27,7 @@ def getIdForAuthor(author):
     if (author in authors_dict):
         return authors_dict[author]
     else:
-        return -1
-
-def getCoAuthorsForAuthor(author, n=10):
-    author_id = getIdForAuthor(author)
-    coauthor_page = getCoAuthorPageUrl(author_id)
-    coauthors = searchPageForCoAuthors(coauthor_page)
-    return coauthors if (len(coauthors) < n) else coauthors[:n]
+        return None
 
 def getCoAuthorPageUrl(id):
     return 'http://scholar.google.com/citations?view_op=list_colleagues&hl=en&user='+str(id)
