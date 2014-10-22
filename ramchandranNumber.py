@@ -85,8 +85,10 @@ def run():
 	_populate_initial_database_()
 	_populate_randomly_(random_author)
 
-	for author in ramchandran_numbers:
-		print unicode(author[1]).title() + ": " + str(ramchandran_numbers[author])
+	entries = ramchandran_numbers.items()
+	entries.sort(key=lambda(elem): elem[1])
+	for entry in entries:
+		print unicode(entry[0][1]).title() + ": " + str(entry[1])
 
 if __name__ == "__main__":
 	run()
