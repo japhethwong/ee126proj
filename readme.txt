@@ -22,6 +22,9 @@ Instructions
 Run our function by executing the following commands:
 $ python ramchandranNumber.py [INITIAL_ALPHA] [MAX_INITIAL_DEPTH] [ALPHA] [MAX_TRIES]
 
+Alternatively, to run our function under default settings, execute:
+$ python ramchandranNumber.py
+
 Arguments:  (All optional, set to default values if not provided)
 -- INITIAL_ALPHA: Branching factor for initial BFS (create starting point)
 -- MAX_INITIAL_DEPTH: Maximum BFS depth for the starting point.
