@@ -7,11 +7,6 @@ RAMCHANDRAN_NAME = 'kannan ramchandran'
 RAMCHANDRAN_ID = 'DcV-5RAAAAAJ'
 CSV_FILENAME = 'author_id_mapping.csv'
 
-authors_dict = {}
-authors_dict[RAMCHANDRAN_NAME] = RAMCHANDRAN_ID
-with open(CSV_FILENAME, 'w') as f:
-    f.write(getCSVEntryForAuthorAndId(RAMCHANDRAN_NAME, RAMCHANDRAN_ID))
-
 def getCoAuthorsForAuthor(author, n=10):
     author_id = getIdForAuthor(author)
     if (not author_id):
@@ -32,13 +27,13 @@ def getIdForAuthor(author):
 def getCoAuthorPageUrl(id):
     return 'http://scholar.google.com/citations?view_op=list_colleagues&hl=en&user='+str(id)
 
-def searchPageForCoAuthors(url)
+def searchPageForCoAuthors(url):
     response = urllib2.urlopen(url)
     html = response.read()
     soup = BeautifulSoup(html)
     elements_on_page = soup.find_all('h3')
     authors = []
-    for (element in elements_on_page):
+    for element in elements_on_page:
         checked = extractAuthorInfo(element)
         if (not checked):
             continue
@@ -69,3 +64,8 @@ def extractAuthorInfo(node):
     user_id = re.sub(r'^/citations\?user=([^&]+).*$', r'\1', url)
     author_name = a_node.string
     return user_id, author_name
+
+authors_dict = {}
+authors_dict[RAMCHANDRAN_NAME] = RAMCHANDRAN_ID
+with open(CSV_FILENAME, 'w') as f:
+    f.write(getCSVEntryForAuthorAndId(RAMCHANDRAN_NAME, RAMCHANDRAN_ID))
