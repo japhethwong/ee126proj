@@ -86,7 +86,6 @@ def run():
 	_populate_randomly_(random_author)
 
 	entries = ramchandran_numbers.items()
-	print(">>> " + str(entries))
 	entries.sort(key=lambda(elem): elem[1])
 	longest_author = len(max(entries, key=lambda(elem): len(elem[0][1]))[0][1])
 
