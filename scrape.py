@@ -1,5 +1,6 @@
 from bs4 import BeautifulSoup
 import urllib2
+import random
 import re
 
 TARGET_CLASS = 'gsc_1usr_name'
@@ -13,10 +14,10 @@ def getCoAuthorsForAuthor(author, n=10):
         author_id = RAMCHANDRAN_ID
     coauthor_page = getCoAuthorPageUrl(author_id)
     coauthors = searchPageForCoAuthors(coauthor_page)
-    return coauthors if (len(coauthors) < n) else coauthors[:n]
+    return coauthors if (len(coauthors) < n) else random.sample(coauthors, n)
 
 def getCSVEntryForAuthorAndId(author, author_id):
-    return str(author)+','+str(author_id)
+    return str(author)+','+str(author_id)+'\n'
 
 def getIdForAuthor(author):
     if (author in authors_dict):
