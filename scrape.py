@@ -1,7 +1,8 @@
 from bs4 import BeautifulSoup
 import urllib2
+import re
 
-SCRAPING_CLASS_NAME = 'gsc_luser_name'
+TARGET_CLASS = 'gsc_1usr_name'
 
 def getIdForAuthor(author):
     return 0
@@ -22,14 +23,28 @@ def searchPageForCoAuthors(url)
     elements_on_page = soup.find_all('h3')
     authors = []
     for (element in elements_on_page):
-        checked = checkFormatOfAuthorElement(element)
+        checked = extractAuthorInfo(element)
         if (not checked):
             continue
         else:
             authors.append(checked)
     return authors
 
-def checkFormatOfAuthorElement(tag):
-    #true if valid author.
-    #if true, return (author_id, name)
-    #else return None
+def extractAuthorInfo(node):
+    # true if valid author
+    # if true, return (author_id, name)
+    # else return None
+
+    # Validate node.
+    if 'class' in node and node['class'] != TARGET_CLASS:
+        return None
+
+    # Get the associated <a> tag.
+    a_node = node.a
+    if not a_node:
+        return None
+
+    url = a_node['href']
+    user_id = re.sub(r'^/citations\?user=([^&]+).*$', r'\1', url)
+    author_name = a_node.string
+    return user_id, author_name
