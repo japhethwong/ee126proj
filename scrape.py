@@ -3,8 +3,14 @@ import urllib2
 
 SCRAPING_CLASS_NAME = 'gsc_luser_name'
 
+authors_dict = {}
+authors_dict['kannan ramchandran'] = ''
+
 def getIdForAuthor(author):
-    return 0
+    if (author in authors_dict):
+        return authors_dict[author]
+    else:
+        return -1
 
 def getCoAuthorsForAuthor(author, n=10):
     author_id = getIdForAuthor(author)
@@ -26,6 +32,9 @@ def searchPageForCoAuthors(url)
         if (not checked):
             continue
         else:
+            author_id, author = checked
+            if (author_id not in authors_dict):
+                authors_dict[author] = author_id
             authors.append(checked)
     return authors
 
