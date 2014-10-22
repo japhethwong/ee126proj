@@ -3,6 +3,7 @@ from collections import deque
 from scrape import getCoAuthorsForAuthor
 
 KANNAN_RAMCHANDRAN = "Kannan Ramchandran"
+PADDING = " " * 4
 ramchandran_numbers = {KANNAN_RAMCHANDRAN : 0}
 
 INTIAL_ALPHA = 5
@@ -89,8 +90,17 @@ def run():
 
 	entries = ramchandran_numbers.items()
 	entries.sort(key=lambda(elem): elem[1])
+	longest_author = len(max(entries, key=lambda(elem): len(elem[0][1]))[0][1])
+
+	print("== Computing Ramchandran numbers ==")
+	print("\nAUTHOR" + PADDING + " " * max(0, longest_author - 6) + "RAMCHANDRAN NUMBER")
+	print("")
 	for entry in entries:
-		print unicode(entry[0][1]).title() + ": " + str(entry[1])
+		author = unicode(entry[0][1]).title()
+		spaces = " " * max(longest_author - len(author), 0)
+		number = str(entry[1])
+		print(author + spaces + PADDING + number)
+	print("")
 
 if __name__ == "__main__":
 	run()
