@@ -40,7 +40,7 @@ def searchPageForCoAuthors(url):
             continue
         else:
             author_id, author = checked
-            if (author_id not in authors_dict):
+            if (author not in authors_dict):
                 authors_dict[author] = author_id
                 with open(CSV_FILENAME, 'a') as f:
                     f.write(getCSVEntryForAuthorAndId(author, author_id))
