@@ -3,32 +3,42 @@ import urllib2
 import re
 
 TARGET_CLASS = 'gsc_1usr_name'
+RAMCHANDRAN_NAME = 'kannan ramchandran'
+RAMCHANDRAN_ID = 'DcV-5RAAAAAJ'
+CSV_FILENAME = 'author_id_mapping.csv'
 
 authors_dict = {}
-authors_dict['kannan ramchandran'] = 'DcV-5RAAAAAJ'
+authors_dict[RAMCHANDRAN_NAME] = RAMCHANDRAN_ID
+with open(CSV_FILENAME, 'w') as f:
+    f.write(getCSVEntryForAuthorAndId(RAMCHANDRAN_NAME, RAMCHANDRAN_ID))
+
+def getCoAuthorsForAuthor(author, n=10):
+    author_id = getIdForAuthor(author)
+    if (not author_id):
+        author_id = RAMCHANDRAN_ID
+    coauthor_page = getCoAuthorPageUrl(author_id)
+    coauthors = searchPageForCoAuthors(coauthor_page)
+    return coauthors if (len(coauthors) < n) else coauthors[:n]
+
+def getCSVEntryForAuthorAndId(author, author_id):
+    return str(author)+','+str(author_id)
 
 def getIdForAuthor(author):
     if (author in authors_dict):
         return authors_dict[author]
     else:
-        return -1
-
-def getCoAuthorsForAuthor(author, n=10):
-    author_id = getIdForAuthor(author)
-    coauthor_page = getCoAuthorPageUrl(author_id)
-    coauthors = searchPageForCoAuthors(coauthor_page)
-    return coauthors if (len(coauthors) < n) else coauthors[:n]
+        return None
 
 def getCoAuthorPageUrl(id):
     return 'http://scholar.google.com/citations?view_op=list_colleagues&hl=en&user='+str(id)
 
-def searchPageForCoAuthors(url)
+def searchPageForCoAuthors(url):
     response = urllib2.urlopen(url)
     html = response.read()
     soup = BeautifulSoup(html)
     elements_on_page = soup.find_all('h3')
     authors = []
-    for (element in elements_on_page):
+    for element in elements_on_page:
         checked = extractAuthorInfo(element)
         if (not checked):
             continue
@@ -36,6 +46,8 @@ def searchPageForCoAuthors(url)
             author_id, author = checked
             if (author_id not in authors_dict):
                 authors_dict[author] = author_id
+                with open(CSV_FILENAME, 'a') as f:
+                    f.write(getCSVEntryForAuthorAndId(author, author_id))
             authors.append(checked)
     return authors
 
