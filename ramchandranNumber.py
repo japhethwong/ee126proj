@@ -7,12 +7,11 @@ PADDING = " " * 4
 ramchandran_numbers = {RAMCHANDRAN_NAME : 0}
 
 
-INTIAL_ALPHA = 5
-MAX_INITIAL_DEPTH = 4
+INITIAL_ALPHA = 4
+MAX_INITIAL_DEPTH = 3
 
 ALPHA = 10
 MAX_TRIES = 50
-
 
 random_author = RAMCHANDRAN_NAME
 
@@ -69,10 +68,9 @@ def _populate_initial_database_():
 # MAX_TRIES tries
 def _populate_randomly_(author):
 	initial_number = ramchandran_numbers[author] + 1
-	max_number = ramchandran_numbers[author] + MAX_TRIES 
+	rmchndrn_number = initial_number 
 
-	for rmchndrn_number in range(initial_number, max_number):
-		print rmchndrn_number
+	for _ in range(MAX_TRIES):
 		coauthors = get_coauthors(author, ALPHA)
 
 		for coauthor in coauthors:
@@ -84,23 +82,16 @@ def _populate_randomly_(author):
 				else:
 					ramchandran_numbers[coauthor] = rmchndrn_number
 
-		author = get_random_coauthor(coauthors)
-		if author is None:
-			break
-
-def test():
-	ramchandran_numbers[RAMCHANDRAN_NAME] = 0
-	author = RAMCHANDRAN_NAME
-	while len(ramchandran_numbers) < 25:
-		print "Author", author
-		coauthors = get_coauthors(author, 1000)
-		print "Co-authors", coauthors
-		print "\n"
-		author = get_random_coauthor(coauthors)[1]
+		temp_author = get_random_coauthor(coauthors)
+		if temp_author is not None:
+			author = temp_author
+			rmchndrn_number += 1
+		else:
+			author = random.choice(ramchandran_numbers.keys())
+			rmchndrn_number = ramchandran_numbers[author]
 
 def run():
 	_populate_initial_database_()
-	print "BFS done!"
 	_populate_randomly_(random_author)
 
 	entries = ramchandran_numbers.items()
@@ -110,16 +101,17 @@ def run():
 	print("\nAUTHOR" + PADDING + " " * max(0, longest_author - 6) + "RAMCHANDRAN NUMBER")
 	print("")
 	for entry in entries:
-		author = unicode(entry[0]).title()
-		spaces = " " * max(longest_author - len(author), 0)
-		number = str(entry[1])
-		print(author + spaces + PADDING + number)
+		try:
+			author = unicode(entry[0]).title()
+			spaces = unicode(" ") * max(longest_author - len(author), 0)
+			number = unicode(entry[1])
+			print(author + spaces + PADDING + number)
+		except Exception:
+			continue
 	print("")
 
 import os
 if __name__ == "__main__":
-	test()
-	os.exit()
 	print("== Computing Ramchandran numbers ==")
 	try:
 		if (len(sys.argv) >= 2):

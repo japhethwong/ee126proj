@@ -1,0 +1,965 @@
+== Computing Ramchandran numbers ==
+Using Parameters:
+	INITIAL_ALPHA: 5
+	MAX_INITIAL_DEPTH: 4
+	ALPHA: 20
+	MAX_TRIES: 150
+
+AUTHOR                                 RAMCHANDRAN NUMBER
+
+Kannan Ramchandran                     0
+Prakash Ishwar                         1
+Gerald Friedland                       1
+Longbo Huang                           1
+Kv Rashmi (Rashmi Vinayak)             1
+Minghua Chen                           1
+Keith Ross                             2
+Krste Asanovic                         2
+Brian Kingsbury                        2
+Osama Khan                             2
+Ulas Kozat                             2
+Zeev Dvir                              2
+Nicholas Ja Harvey                     2
+Jin Li                                 2
+Steve Renals                           2
+Parikshit Gopalan                      2
+Mihai Patrascu                         2
+Zongpeng Li                            2
+Nikki Mirghafori                       2
+Chuck Wooters                          2
+Ness Shroff                            2
+Sen-Ching Samson Cheung                2
+Amit Mondal                            2
+David Karger                           2
+P Vijay Kumar                          2
+David Van Leeuwen                      2
+Chuohao Yeo                            2
+Alonso Silva                           2
+Rodolfo Azevedo                        2
+Noga Alon                              2
+Dimitris Papailiopoulos                2
+Mark Manasse                           2
+Rina Panigrahy                         2
+Cheng Huang                            2
+Ross Cutler                            2
+Abhinav Pathak                         2
+Viveck R Cadambe                       2
+Anthony Vetro                          2
+Y. Richard Yang                        2
+Cha Zhang                              2
+Chao Zhang                             2
+Y. Charlie Hu                          2
+Daniel Pw Ellis                        2
+Randal Burns                           2
+Andreas Stolcke                        2
+Eric Fosler-Lussier                    2
+Manish Jain                            2
+Nihar B. Shah                          2
+Sanjeev Mehrotra                       2
+Qing Zhao                              2
+Cynthia Dwork                          2
+Syed A. Jafar                          2
+Nelson Morgan                          2
+Scott Moeller                          2
+Alexandros G Dimakis                   2
+Sergey Yekhanin                        2
+Hynek Hermansky                        2
+Shizhen Zhao                           2
+Wu Feng                                3
+Phillipa Gill                          3
+Olgica Milenkovic                      3
+Yuejie Chi                             3
+Jianwei Huang                          3
+Jinfeng Zhang                          3
+Edwin Kp Chong                         3
+Jose Blanchet                          3
+Allen Y. Yang                          3
+Timothy Middelkoop                     3
+Mhr Khouzani                           3
+Yao-Win Peter Hong                     3
+Matias Negrete-Pincetic                3
+Douglas Down                           3
+Bhaskar Krishnamachari                 3
+Niko Brummer                           3
+Adam Wierman                           3
+Kyeongcheol Yang                       3
+Miranti Indar Mandasari                3
+Hans Mittelmann                        3
+Chen-Nee Chuah                         3
+Ali Pezeshki                           3
+Abhay Parekh                           3
+Junshan Zhang                          3
+Dengyong (Denny) Zhou                  3
+V Lalitha                              3
+Himabindu Pucha                        3
+Kaushik Roy                            3
+Sujay Sanghavi                         3
+John Hansen                            3
+Dr. Frank Vohle                        3
+Guanfeng Liang                         3
+Anthony A. Maciejewski                 3
+Saurabh Bagchi                         3
+Karen Zita Haigh                       3
+Georgios Angelopoulos                  3
+Prabir Barooah                         3
+Andrzej Banaszuk                       3
+Djoerd Hiemstra                        3
+Lap Chi Lau                            3
+Stanislaw H. Zak                       3
+Jong-Hwan Kim                          3
+Atilla Eryilmaz                        3
+Shih-Fu Chang                          3
+Devavrat Shah                          3
+Andrea Goldsmith                       3
+Christian M. Hafner                    3
+Chang Wook Ahn                         3
+Satish Narayanan                       3
+Kangwook Lee                           3
+Iulia Lefter                           3
+Stephen Gedney                         3
+Peter J. Ramadge                       3
+Prakash N                              3
+Hanif D. Sherali                       3
+Pramod Kumar Meher                     3
+Alexander Vardy                        3
+Vaneet Aggarwal                        3
+Jon Crowcroft                          3
+Xiaokang Yang                          3
+I-Jeng Wang                            3
+Rong Chen                              3
+Hulya Seferoglu                        3
+Amir Leshem                            3
+Prashant Mehta                         3
+Muriel Medard                          3
+Baochun Li                             3
+Hayley Hung                            3
+Waseem Sheikh                          3
+Catherine Rosenberg                    3
+Eitan Altman                           3
+Ken Duffy                              3
+Peyman Pahlavani                       3
+Vijay Venkatesh, Mahalingam            3
+Riccardo Lazzeretti                    3
+Xiaomin Chen                           3
+Una-May O'Reilly                       3
+Venugopal V. Veeravalli                3
+Sachin Katti                           3
+Huibing Yin                            3
+Luis Lastras                           3
+Jung-Min (Jerry) Park                  3
+Chris Kreucher                         3
+John Stankovic                         3
+Jean Walrand                           3
+Sean Meyn                              3
+Aditya Ramamoorthy                     3
+Jim Dai                                3
+Louis Scharf                           3
+Xiaojun Lin                            3
+Mung Chiang                            3
+Fabian Kuhn                            3
+Parvez Ahammad                         3
+Chia-Wen Lin                           3
+Philippe Jacquet                       3
+Chaoping Xing                          3
+Jie Liang                              3
+Adam K Tilton                          3
+Dimitrios Koutsonikolas                3
+Bikash Dey                             3
+Xiaowen Chu                            3
+Shaunak Mishra                         4
+Salman Malik                           4
+Gabriel Magno                          4
+Katharine Henry                        4
+Eytan Ruppin                           4
+Fernando Pereira                       4
+Jelena Kovacevic                       4
+Yash Deshpande                         4
+Thomas Hain                            4
+Abhishek Sharma                        4
+Gudmund Skovbjerg Frandsen             4
+Cq Doe                                 4
+Kf Taylor                              4
+Fernando Amat                          4
+Berwin Turlach                         4
+Jeffrey Magee                          4
+Meeyoung Cha                           4
+Srikrishna Bhashyam                    4
+Francesco Orabona                      4
+Ralf Klamma                            4
+Carlos Busso                           4
+Lieven Vandenberghe                    4
+Martin Roetteler                       4
+Samy Bengio                            4
+Wadim Zudilin                          4
+Andrew Eberhard                        4
+Steve Wheeler                          4
+Gertjan Burghouts                      4
+Edgar Weippl                           4
+Igor E. Shparlinski                    4
+Leon Rothkrantz                        4
+Roy Dong                               4
+Ronald Deibert                         4
+Mark Gales                             4
+Moshe Ben-Ezra                         4
+Hao Hu                                 4
+Dah Ming Chiu                          4
+Cristina Costa                         4
+Jianbo Gao                             4
+Wei Liu                                4
+Jussara Almeida                        4
+Jun Xu                                 4
+Amit Roy-Chowdhury                     4
+Raphael Cendrillon                     4
+Jianlong Zhou                          4
+Lawrence K Saul                        4
+Richard Kulpa                          4
+Constantin A. Rothkopf                 4
+Soummya Kar                            4
+Xiaohu Tang                            4
+Adriano Veloso                         4
+Fouque                                 4
+Andrija Mihoci                         4
+Dongyan Xu                             4
+Josef Wiemeyer                         4
+Rachit Agarwal                         4
+Dan Rubenstein                         4
+Regina S Burachik                      4
+Chiou-Yng Lee                          4
+Gene Myers                             4
+Patrick Thiran                         4
+B. Sundar Rajan                        4
+Gareth Jf Jones                        4
+O. Ozan Koyluoglu                      4
+Mauro Barni                            4
+Sudipta Sengupta                       4
+Morgan Sonderegger                     4
+K Vinodh                               4
+Jridi Maher                            4
+Adnan Raja                             4
+Fabien Cardinaux                       4
+Jose Felipe Voloch                     4
+Carl Sable                             4
+Anna Scaglione                         4
+Animesh Kumar                          4
+Mathew Magimai Doss                    4
+Mukesh Kumar Raval                     4
+Krish Eswaran                          4
+Wen Gao                                4
+Arjen Lenstra                          4
+Can Emre Koksal                        4
+Rainer Steinwandt                      4
+Boi Faltings                           4
+Abbas El Gamal                         4
+Mp (Anant) Anantram                    4
+Roberto Tron                           4
+Shai Shalev-Shwartz                    4
+Daniel Gillick                         4
+Js Marron                              4
+Glenn Gulak                            4
+Michael Kopp                           4
+Giuseppe Ateniese                      4
+Simon Bozonnet                         4
+Benjamin Ip Rubinstein                 4
+Tara Sainath                           4
+David Wagner                           4
+Jun Wang                               4
+Florent Monay                          4
+Satashu Goel                           4
+Serdar Boztas                          4
+Paolo Braca                            4
+Anirban Mahanti                        4
+Hui Zang                               4
+Christian Lehr                         4
+Alessandro Piva                        4
+Soung Chang Liew                       4
+Iasonas Kokkinos                       4
+Kun Deng                               4
+Lothar Thiele                          4
+Joseph (Yossi) Keshet                  4
+Henry Wolkowicz                        4
+Noam Peled                             4
+Supriyo Chakraborty                    4
+Yu-Ming Liang                          4
+Michael Langberg                       4
+Biswanath Mukherjee                    4
+Changhee Joo                           4
+Pongtep Angkititrakul                  4
+Dmitri E. Nikonov                      4
+Olivier Siohan                         4
+Konstantinos Blekas                    4
+Andrei Gurtov                          4
+Pieter Abbeel                          4
+Wei Gao                                4
+Gal Chechik                            4
+Xiaokui Xiao                           4
+Eleazar Eskin                          4
+Victor Bahl                            4
+Zilong Liu                             4
+D Manjunath                            4
+Shankar Rao                            4
+Anja Lorenz                            4
+Dinggang Shen                          4
+Bs Manjunath                           4
+Walid Saad                             4
+Thomas C Walters                       4
+Hj Siegel                              4
+Chin-Hui Lee                           4
+Norman Poh                             4
+Wei Zhang                              4
+Sameer Pawar                           4
+Gabrielle E. Kelly                     4
+Alain Rakotomamonjy                    4
+Yuan Ding                              4
+G Kochanski                            4
+Russell Luke                           4
+Michail G. Lagoudakis                  4
+Alexander Pohl                         4
+Hanchuan Peng                          4
+J. Shane Culpepper                     4
+Leonie Simpson                         4
+Udaya Parampalli                       4
+Ramtin Pedarsani                       4
+Markus Fassold                         4
+Roberto Barrio                         4
+Juan E. Tapiador                       4
+Simon J. Puglisi                       4
+Lewis Tseng                            4
+Yasemin Altun                          4
+Malathi Veeraraghavan                  4
+Jonathan (Jon) Borwein                 4
+Sarah Aerni                            4
+Koray Karabina                         4
+Yin Sun                                4
+Kevin Eliceiri                         4
+Hermann Maurer                         4
+Ponnurangam Kumaraguru                 4
+Matthias Ritter                        4
+Eli Yablonovitch                       4
+Jean-Marc Odobez                       4
+Pierluigi Failla                       4
+Tamara Polajnar                        4
+Xiaoxin (Christine) Zhang              4
+Dette                                  4
+Par Kurlberg                           4
+Selver Softic                          4
+Chih-Hung Ling                         4
+Yih-Farn Robin Chen                    4
+Hazhir Rahmandad                       4
+Nick Howgrave-Graham                   4
+Johannes Metscher                      4
+Sourabh Jain                           4
+Farrokh Vatan                          4
+Tianming Liu                           4
+Keming Yu                              4
+Zhemin Zhu                             4
+Salim El Rouayheb                      4
+Lars Eggert                            4
+Subhendu Batabyal                      4
+Bahram Jalali                          4
+Yair Weiss                             4
+Sang Gug Lee                           4
+Silvestru Sever Dragomir               4
+David Mcallester                       4
+Sougato Bose                           4
+Tie Liu                                4
+Shirin Saeedi Bidokhti                 4
+Kenneth Church                         4
+Andrew Hatch                           4
+Philip Woodland                        4
+Sarit Kraus                            4
+Sangtae Ha                             4
+Lei Ying                               4
+Conrad Lienhardt                       4
+Michael J Layden                       4
+Pedro Peris-Lopez                      4
+Nitin Vaidya                           4
+Thomas Schneider                       4
+Niek Tax                               4
+Christian Kirchner                     4
+Dina Katabi                            4
+Lin Zhang                              4
+Bernard Mans                           4
+Bing Li                                4
+David A. Maltz                         4
+Z. Morley Mao                          4
+Alexei Pozdnoukhov                     4
+Hao Tang                               4
+A Ben Tal                              4
+Andreas Holzinger                      4
+Chen Feng                              4
+Rittwik Jana                           4
+Allison M Mckendrick                   4
+Alexander A. Balandin                  4
+Krishna P. Gummadi                     4
+Florent F. Garcin                      4
+Yves Grandvalet                        4
+Alfonso Valencia                       4
+Patrick Nguyen                         4
+Frederique Oggier                      4
+Anand Sarwate                          4
+Mohammad Sadegh Rasooli                4
+Arnold Baca                            4
+Boris Mordukhovich                     4
+Lin Zhong                              4
+Qiwei Li                               4
+Ying Xu                                4
+Mehdi Tibouchi                         4
+Aikaterini (Katerina) Mitrokotsa       4
+Nina Taft                              4
+Xiaoou Tang                            4
+Daphna Weinshall                       4
+Qiji Zhu                               4
+Mayank Bakshi                          4
+Amiya Kumar Rath                       4
+Hai Liu                                4
+Amitabha Mukerjee                      4
+Vinod Prabhakaran                      4
+Luis Sentis                            4
+Vivek Borkar                           4
+Jakob Hoydis                           4
+Jagdish Patra                          4
+Michael Riley                          4
+Constantinos Daskalakis                4
+Thomas Szkopek                         4
+Xiaogang Wang                          4
+Melda Yuksel                           4
+Dr Luke Mathieson                      4
+Virgilio Almeida                       4
+Sidharth Jaggi                         4
+Bhaskaran Raman                        4
+Soura Dasgupta                         4
+Narayanan Sadagopan                    4
+Daniel Gatica-Perez                    4
+Songhwai Oh                            4
+Amin Shokrollahi                       4
+Michel Galley                          4
+Randall Berry                          4
+Xin Hu                                 4
+Dinesh Babu Jayagopi                   4
+Matthias R. Fengler                    4
+Tanja Lange                            4
+Pang-Chang Lan                         4
+Amir Globerson                         4
+Zhouchen Lin                           4
+Barbara Kieslinger                     4
+Jens Perch Nielsen                     4
+Natalia Silberstein                    4
+Edward Herskovits                      4
+David Tse                              4
+William M. Farmer                      4
+Gonzalo De Polavieja                   4
+Vlad Popovici                          4
+Richard F. Lyon                        4
+Nathan Srebro                          4
+Virag Shah                             4
+Pascal Frossard                        4
+Michel Thera                           4
+Yanbin Wang                            4
+Sriram Vishwanath                      4
+Chia-Han Lee                           4
+Wenwu Zhu                              4
+Brammert Ottens                        4
+Josef Kolbitsch                        4
+Douglas Eck                            4
+Alan Willner                           4
+Jan Van Gemert                         4
+Miika Komu                             4
+Alessandro Vinciarelli                 4
+Patrick Louis Combettes                4
+Mar Jimenez Sevilla                    4
+Chih-Chieh Cheng                       4
+Ronald Poppe                           4
+Adrian Lewis                           4
+Pascal Wiggers                         4
+Israel Cidon                           4
+Chuan Wu                               4
+Johan Du Preez                         4
+Jean-Philippe Thiran                   4
+Serge Vaudenay                         4
+Wolfgang Reinhardt                     4
+Ravi R Mazumdar                        4
+Uday V. Shanbhag                       4
+Changho Suh                            4
+Feng Qian                              4
+Chong-Wah Ngo                          4
+Jehoshua Bruck                         4
+Jungsik Kim                            4
+Navendu Jain                           4
+Sibasish Ghosh                         4
+Onkar Dabeer                           4
+Augustin Chaintreau                    4
+Clayton Shepard                        4
+Adrian Bowman                          4
+Serafim Batzoglou                      4
+Ankit Singh Rawat                      4
+Amin Khajehnejad                       4
+Guillaume Urvoy-Keller                 4
+Alessandro Abate                       4
+Alexander Russell                      4
+Chi Zhang                              4
+Bhushan Jagyasi                        4
+Abhilash Jindal                        4
+Yoshua Bengio                          4
+Mohammad Al-Smadi                      4
+Andrew Turpin                          4
+Affan Syed                             4
+Daphne Koller                          4
+Yves Lucet                             4
+Jason Swedlow                          4
+Dhruv Gupta                            4
+Martin Ebner                           4
+Serge Vladuts                          4
+Supriyo Bandyopadhyay                  4
+Julio Hernandez-Castro                 4
+Claudia Bremer                         4
+Venkatesan Guruswami                   4
+Robert Lund                            4
+Sigbert Klinke                         4
+Vwani Roychowdhury                     4
+Hsuan-Jung Su                          4
+Frank Garvan                           4
+Meltem Sonmez Turan                    4
+Haibo Zeng                             4
+S. Sandeep Pradhan                     4
+Alex Graves                            4
+David T Yost                           4
+Jin-Yi Cai                             4
+Rohit Prabhavalkar                     4
+Christina Fragouli                     4
+Albert Strasheim                       4
+Lei Zhang                              4
+Vladimir Spokoiny                      4
+Ming-Ting Sun                          4
+Christos Dimitrakakis                  4
+Yang Yu                                4
+Samuel Thomas                          4
+Js Plank                               4
+James Gentle                           4
+Oriol Vinyals                          4
+Levent Arslan                          4
+Marcos Andre Goncalves                 4
+Risheng Liu                            4
+Daniel Povey                           4
+Jason Weston                           4
+Jianqing Fan                           4
+Jochen Triesch                         4
+Cecilia Mascolo                        5
+Swamy, Mns                             5
+Yunlian Sun                            5
+Muhammad Muneeb Ullah                  5
+Bruno Coutinho                         5
+Yicong Zhou                            5
+Horst Bunke                            5
+Brian Brewington                       5
+Altigran Soares Da Silva               5
+Etienne Grossmann                      5
+Wei Zhao                               5
+E. Boutillon                           5
+Nikolaus Hautsch                       5
+Anastassia Loukina                     5
+Donald Estep                           5
+Johnnatan Messias                      5
+Dr. Tony Sahama                        5
+David Frohlich                         5
+Daniele Quercia                        5
+Mahdi Shabany                          5
+Ali Sheikholeslami                     5
+Kostas Pagiamtzis                      5
+Wun-She Yap                            5
+Ilja Kuzborskij                        5
+Pedro Os Vaz De Melo                   5
+Lale Akarun                            5
+Frank R. Kschischang                   5
+Anders Lindgren                        5
+Claudio Castellini                     5
+Ganapati Panda                         5
+Mark Handley                           5
+Somaya Arianfar                        5
+Saeed Gazor                            5
+Dumitru Erhan                          5
+Andrzej Drygajlo                       5
+Alina Ostafe                           5
+Diane Donovan                          5
+Virgil Griffith                        5
+Axel Cleeremans                        5
+Ronan Collobert                        5
+Vittorio Ferrari                       5
+Mohamed Cheriet                        5
+Giorgio Metta                          5
+Stefano Ferretti                       5
+Albert Ali Salah                       5
+Jukka Manner                           5
+Basant Kumar Mohanty                   5
+Pasi Sarolahti                         5
+Chi Ho Chan                            5
+Steve Wilton                           5
+David Windridge                        5
+Antonio Loureiro                       5
+Roberto Paredes                        5
+Sidharth Chhabra                       5
+Bernadette Dorizzi                     5
+Vincent Gaudet                         5
+Juan Manuel Gonzalez Nieto             5
+Massimo Tistarelli                     5
+J Coleman                              5
+Katalin Gyarmati                       5
+Fernando Alonso-Fernandez              5
+Alfred Hero                            5
+Wagner Meira, Jr.                      5
+Shankarachary Ragi                     5
+Julian Fierrez                         5
+Thomas Schierl                         5
+Josef Sivic                            5
+Flavio Vinicius Diniz De Figueiredo    5
+Dirk Kutscher                          5
+Andreas Argyriou                       5
+Wei Lee Woon                           5
+Fabio Roli                             5
+Barbara Caputo                         5
+Prof. Gananath Dash                    5
+Giulio Sandini                         5
+Muhammad Reza Z'Aba                    5
+Varun Singh                            5
+Hamed Haddadi                          5
+Marisa Vasconcelos                     5
+Naveen Kr. Sharma                      5
+Simon De Lusignan                      5
+Andrew Clark                           5
+Marco Fornoni                          5
+Teo Sui Guan                           5
+Robert D Mcleod                        5
+Kenneth C. Smith                       5
+Pasi Lassila                           5
+Colin Perkins                          5
+Indrajit Ray                           5
+Ricardo Baeza-Yates                    5
+Lars Wolf                              5
+Brendan Frey                           5
+William Zhu                            5
+Carlos Alessandro Sena De Freitas      5
+Tatiana Tommasi                        5
+Giuseppe Baselli                       5
+Mark Horowitz                          5
+N. Asokan                              5
+Jiri Matas                             5
+John Kelsey                            5
+Usunier Nicolas                        5
+Gentile Claudio                        5
+Vitomir Struc                          5
+Vadim Smolyakov                        5
+Erik Demaine                           6
+Mehdi Kiani                            6
+Tatiana Pontes                         6
+Shai Ben-David                         6
+Sos Agaian (Agayan)                    6
+Dr. Pranab Kishor Mohapatra            6
+Marc Dacier                            6
+Jonathan Sebat                         6
+Leonardo Chaves Dutra Da Rocha         6
+Cl Philip Chen                         6
+Ruslan Salakhutdinov                   6
+Xueyuan Zhou                           6
+Kapali Viswanathan                     6
+Boaz Nadler                            6
+Douglas Stebila                        6
+Alan Tickle                            6
+Malcolm Corney                         6
+Amarendra Narayan Misra                6
+Mark Crovella                          6
+Olivier Thonnard                       6
+Greg Shakhnarovich                     6
+Pradeep Ravikumar                      6
+Daniel Hasan Dalip                     6
+Yue (Rex) Wu                           6
+Avrim Blum                             6
+Javad Azimi                            6
+Andrew Marrington                      6
+Konstantin Makarychev                  6
+Ambuj Tewari                           6
+Colin Boyd                             6
+Yury Makarychev                        6
+Ohad Shamir                            6
+Ali Jalali                             6
+David Love                             6
+Nishchal Kush                          6
+Corrado Leita                          6
+Xiaoli Fern                            6
+Bud Mishra                             6
+Wenbing Tao                            6
+Irfan Ahmed                            6
+Benjamin Recht                         6
+Chi-Man Pun                            6
+Daniel Hsu                             6
+Jason Rennie                           6
+Karen Panetta                          6
+Anthony J Maeder                       7
+Eliza Yingzi Du                        7
+Viswanath Nagarajan                    7
+Jason A. Dowling                       7
+Howard Karloff                         7
+Mo M Jamshidi                          7
+Niv Buchbinder                         7
+Yuval Rabani                           7
+Hani H. Saleh                          7
+Moses Charikar                         7
+Kenny Paterson                         7
+Valencia Joyner Koomson                7
+Nikhil Bansal                          7
+Roy Schwartz                           7
+At Chronopoulos                        7
+Percy Liang                            7
+Nikhil R. Devanur                      7
+Andrei Romashchenko                    7
+Giovanni Comarela                      7
+Jinbo Xu                               7
+Pauli Kuosmanen                        7
+Reiner Creutzburg                      7
+Arnab Bhattacharyya                    7
+David Akopian                          7
+Andrew P. Bradley                      7
+Ed Dawson                              7
+Maxim Sviridenko                       7
+Gregory White                          7
+Sivan Sabato                           7
+Kim-Kwang Raymond Choo                 7
+Alexander Shen                         7
+Joseph Seffi Naor                      7
+Grigory Yaroslavtsev                   7
+Igor Aizenberg                         7
+Mikhail Belkin                         7
+Nicholas Navin                         7
+Craig Costello                         7
+Anish Mathuria                         7
+Saharon Rosset                         7
+Tracy Kimbrel                          7
+M Choudary Gorantla                    7
+Evandro Lt Paradela Cunha              7
+Willy Susilo                           7
+Rohit Khandekar                        7
+Anand Louis                            7
+Artyom Grigoryan                       7
+Amol Ghoting                           7
+Christopher Blake Smith                7
+Maria-Florina Balcan                   7
+Debmalya Panigrahi                     7
+Sherman Sm Chow                        7
+Dr. Roslan Ismail, Ctal - Tm, Ctfl     7
+Ethan Danahy                           7
+Ian H. Witten                          7
+Mark Manulis                           7
+Aravindan Vijayaraghavan               7
+Rachel Ward                            7
+Sam Roweis (Memorial)                  7
+Gregory D. Peterson                    7
+Hussain Nyeem                          7
+Fidel Santamaria                       7
+Nasser M Nasrabadi                     7
+Leonid A. Levin                        8
+Peter Gacs                             8
+Deanna Needell                         8
+Giovanni Gallo                         8
+Elad Hazan                             8
+Joel A. Tropp                          8
+Bruno Bauwens                          8
+Andrew Sundstrom                       8
+Chee Yap                               8
+Richard Cole                           8
+Alberto Policriti                      8
+Tsz Hon Yuen                           8
+Prahladh Harsha                        8
+Vezzi Francesco                        8
+Alexey Chernov                         8
+David Dill                             8
+James Gimzewski                        8
+Giuseppe Narzisi                       8
+Rohit Parikh                           8
+Ilan Newman                            8
+Katalin Friedl                         8
+Ilya Razenshteyn                       8
+Owen White                             8
+Philip Dawid                           8
+Scott Powers                           8
+Virginia Smith                         9
+Christos Delivorias                    9
+Michael I. Jordan                      9
+Selin Damla Ahipasaoglu                9
+Martin Jaggi                           9
+Satyaranjan Pattanaik                  9
+Marius Zimand                          9
+Qiong Huang                            9
+Daniel Sevcovic                        9
+Man Ho Au                              9
+Georges Otte                           9
+Willem Waegeman                        9
+Ngai-Man Cheung                        9
+Duncan S. Wong                         9
+Yi Mu                                  9
+Yurii Nesterov                         9
+Olivier Fercoq                         9
+Huaxiong Wang                          10
+Paulo Mateus                           10
+Francisco Mota                         10
+Kan Yang                               10
+Jason Xue                              10
+Lance Fortnow                          10
+Kui Ren                                10
+Yan Wang                               10
+Joonsang Baek                          10
+Fangguo Zhang                          10
+Xiaohua Jia                            10
+Nikos Mamoulis                         10
+Guilin Wang                            10
+Kwangjo Kim                            10
+Xiaofeng Chen                          10
+Liusheng Huang                         10
+Qing Li                                10
+Paul Vitanyi                           10
+Aleksandr Aravkin                      11
+Ebru Arisoy                            11
+Andrew Rosenberg                       11
+Peder A Olsen                          11
+Lidia Mangu                            11
+Abhinav Sethy                          11
+Dimitri Kanevsky                       11
+George E. Dahl                         11
+Geoffrey Hinton                        11
+Ganapathy Sriram                       11
+Navdeep Jaitly                         11
+Andre Gustavo Adami                    11
+Owen Rambow                            11
+Sarmad Hussain                         12
+Mitchel Weintraub                      12
+Steven Wegmann                         12
+David Moore                            12
+Jkudupa                                12
+John Aston                             12
+Florian Metze                          12
+Bettina Braun                          12
+Margaret Renwick                       12
+James Scobbie                          12
+Jan Van Santen                         12
+Arun Narayanan                         12
+Mirjam Wester                          12
+John C Marshall                        12
+Preethi Raghavan                       12
+Yi Ma                                  12
+Andrew Nevins                          12
+Laura Dilley                           12
+Murat Saraclar                         12
+Sylvia Rueda                           12
+John Local                             12
+Steven Bird                            12
+Deliang Wang                           12
+Michael White                          12
+Lou Burnard                            12
+Colin Cotter                           12
+Sungbok Lee                            12
+Jane Stuart-Smith                      12
+Adrian Mackenzie                       12
+William Hartmann                       12
+Christopher Alvey                      12
+Mark Liberman                          12
+Bo Wu                                  13
+Pavel Pecina                           13
+Jiangye Yuan                           13
+Michael Arbib                          13
+Jesper Boldt                           13
+Bonnie Dorr                            13
+John Woodruff                          13
+John C. Henderson                      13
+Dongwon Lee                            13
+Christoph Von Der Malsburg             13
+Lori Lamel - Old                       13
+Janet B. Pierrehumbert                 13
+Michael Syskind Pedersen               13
+Franciska De Jong                      13
+Richard M. Stern                       13
+Arni Kristjansson                      13
+Andrew Mackinlay                       13
+James R. Curran                        13
+Steve Cassidy                          13
+Jason Baldridge                        13
+Paul Cook                              13
+Wenwu Wang                             13
+Donald C Wunsch Ii                     13
+Roseli Aparecida Francelin Romero      13
+Marcello Federico                      13
+Jon P Barker                           13
+Mate Matolcsi                          13
+Kun Han                                13
+Timothy Baldwin                        13
+Robert Dale                            13
+Oliver Stegen                          13
+David Day                              13
+Anuj Srivastava                        13
+Christian Mauduit                      13
+Hans Uszkoreit                         13
+J.-S. Roger Jang                       13
+Sarah E Yoho                           13
+Jorma Laaksonen                        14
+Laurent Romary                         14
+Stephen Pulman                         14
+Unto K. Laine                          14
+Junichi Tsujii                         14
+Ulpu Remes                             14
+Geert-Jan Kruijff                      14
+Guy Brown                              14
+Vesa Siivola                           14
+Mikko Kurimo                           14
+Kyunghyun Cho                          14
+Valia Kordoni                          14
+Bernt Schiele                          14
+Georg Rehm                             14
+Silvia Hansen-Schirra                  14
+Ville Pulkki                           14
+Meike Klettke                          14
+Annie Zaenen                           14
+Toni Heittola                          14
+Anette Frank                           14
+Heikki Kallasjoki                      14
+Tuomas Virtanen                        14
+Nicoletta Calzolari                    14
+Markus Koskela                         14
+Tapani Raiko                           14
+Ilhan Aslan                            14
+Rui Wang                               14
+Antti Honkela                          14
+Jort F. Gemmeke                        14
+Erkki Oja                              14
+Thierry Chanier                        15
+Antonella De Angeli                    15
+Norbert Reithinger                     15
+Eric Villemonte De La Clergerie        15
+Patrice Lopez                          15
+David Traum                            15
+Adam Kilgarriff                        15
+Marc Jamoulle                          15
+Andrei Popescu-Belis                   15
+Dan Tufis                              16
+Csaba Oravecz                          16
+Jakub Waszczuk                         16
+Kiril Simov                            16
+Janos Csirik                           16
+Jean Senellart                         16
+Agnieszka Mykowiecka                   16
+Jakub Piskorski                        16
+Miroslav Spousta                       16
+Maciej Ogrodniczuk                     16
+Andras Kornai                          16
+Cvetana Krstev                         16
+Piroska Lendvai                        16
+Mariana Damova                         17
+Radoslav Pavlov                        17
+Milen Kouylekov                        17
+Antonio Sanfilippo                     17
+Alisdair Smithies                      17
+Bernardo Magnini                       17
+Aleksandar Savkov                      17
+Stefan Trausan-Matu                    17
+Maarten De Rijke                       17
+Vlad Posea                             17
+Preslav Nakov                          17
+Andrew J. Cowell                       18
+Ted Briscoe                            18
+Keith Fligg                            19
+
