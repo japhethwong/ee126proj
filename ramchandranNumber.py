@@ -6,11 +6,11 @@ import sys
 PADDING = " " * 4
 ramchandran_numbers = {(RAMCHANDRAN_ID, RAMCHANDRAN_NAME) : 0}
 
-INTIAL_ALPHA = 4
-MAX_INITIAL_DEPTH = 2
+INITIAL_ALPHA = 5
+MAX_INITIAL_DEPTH = 4
 
-ALPHA = 5
-MAX_TRIES = 10
+ALPHA = 10
+MAX_TRIES = 75
 
 random_author = RAMCHANDRAN_NAME
 
@@ -52,7 +52,7 @@ def _bfs_(Q):
 		if not author in ramchandran_numbers:
 			ramchandran_numbers[author] = depth
 
-		coauthors = get_coauthors(author, INTIAL_ALPHA)
+		coauthors = get_coauthors(author, INITIAL_ALPHA)
 		for coauthor in coauthors:
 			Q.append((coauthor, depth + 1))
 
@@ -70,21 +70,35 @@ def _populate_randomly_(author):
 	max_number = ramchandran_numbers[author] + MAX_TRIES 
 
 	for rmchndrn_number in range(initial_number, max_number):
+		print rmchndrn_number
 		coauthors = get_coauthors(author, ALPHA)
-		coauthor = get_random_coauthor(coauthors)
 
-		if coauthor is not None:
-			if coauthor in ramchandran_numbers:
-				prev_number = ramchandran_numbers[coauthor]
-				if prev_number > rmchndrn_number:
+		for coauthor in coauthors:
+			if coauthor is not None:
+				if coauthor in ramchandran_numbers:
+					prev_number = ramchandran_numbers[coauthor]
+					if prev_number > rmchndrn_number:
+						ramchandran_numbers[coauthor] = rmchndrn_number
+				else:
 					ramchandran_numbers[coauthor] = rmchndrn_number
-			else:
-				ramchandran_numbers[coauthor] = rmchndrn_number
 
-		author = coauthor
+		author = get_random_coauthor(coauthors)
+		if author is None:
+			break
+
+def test():
+	ramchandran_numbers[RAMCHANDRAN_NAME] = 0
+	author = RAMCHANDRAN_NAME
+	while len(ramchandran_numbers) < 25:
+		print "Author", author
+		coauthors = get_coauthors(author, 10)
+		print "Co-authors", coauthors
+		print "\n"
+		author = get_random_coauthor(coauthors)
 
 def run():
 	_populate_initial_database_()
+	print "BFS done!"
 	_populate_randomly_(random_author)
 
 	entries = ramchandran_numbers.items()
@@ -100,7 +114,10 @@ def run():
 		print(author + spaces + PADDING + number)
 	print("")
 
+import os
 if __name__ == "__main__":
+	test()
+	os.exit()
 	print("== Computing Ramchandran numbers ==")
 	try:
 		if (len(sys.argv) >= 2):
