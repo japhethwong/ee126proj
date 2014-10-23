@@ -12,12 +12,13 @@ def getCoAuthorsForAuthor(author, n=10):
     author_id = getIdForAuthor(author)
     if (not author_id):
         author_id = RAMCHANDRAN_ID
-    coauthor_page = getCoAuthorPageUrl(author_id)
-    coauthors = searchPageForCoAuthors(coauthor_page)
+    coauthor_page_url = getCoAuthorPageUrl(author_id)
+    coauthors = searchPageForCoAuthors(coauthor_page_url)
+    coauthors = [x[1] for x in coauthors]
     return coauthors if (len(coauthors) < n) else random.sample(coauthors, n)
 
 def getCSVEntryForAuthorAndId(author, author_id):
-    return str(author)+','+str(author_id)+'\n'
+    return repr(author)+','+repr(author_id)+'\n'
 
 def getIdForAuthor(author):
     if (author in authors_dict):
