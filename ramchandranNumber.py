@@ -6,11 +6,13 @@ import sys
 PADDING = " " * 4
 ramchandran_numbers = {(RAMCHANDRAN_ID, RAMCHANDRAN_NAME) : 0}
 
-INITIAL_ALPHA = 5
+
+INTIAL_ALPHA = 5
 MAX_INITIAL_DEPTH = 4
 
 ALPHA = 10
-MAX_TRIES = 75
+MAX_TRIES = 50
+
 
 random_author = RAMCHANDRAN_NAME
 
